@@ -798,7 +798,7 @@ Let's configure Eunomia to run periodically jobs.
 
 . Edit the template `cluster-gitops.yaml` template to add a `SCHEDULE` parameter:
 +
-Find the two commented lines in the provided template and enabel periodic processing using the `"${SCHEDULE}"` parameter value for the `cron` value.
+Find the two commented lines in the provided template and enable periodic processing using the `"${SCHEDULE}"` parameter value for the `cron` value.
 Once updated the triggers for the GitOpsConfig should read:
 +
 --------------------------------------------------------------------------------
@@ -812,7 +812,7 @@ Next add the `SCHEDULE` parameter to the template definition with the default va
 +
 --------------------------------------------------------------------------------
 - name: SCHEDULE
-  description: Periodic scheludle for gitops processing
+  description: Periodic schedule for gitops processing
   value: "@hourly"
 --------------------------------------------------------------------------------
 +
@@ -824,7 +824,7 @@ $ **sed -i \'s/#- type: Periodic/- type: Periodic/' templates/cluster-gitops.yam
 $ **sed -i \'s/#cron: .*/cron: "${SCHEDULE}"/' templates/cluster-gitops.yaml**
 $ **cat >>templates/cluster-gitops.yaml <<EOF
 - name: SCHEDULE
-  description: Periodic scheludle for gitops processing
+  description: Periodic schedule for gitops processing
   value: "@hourly"
 EOF**
 --------------------------------------------------------------------------------
@@ -903,7 +903,7 @@ Stage this hunk [y,n,q,a,d,/,j,J,g,e,?]? **y**
    - name: TEMPLATE_PROCESSOR_IMAGE
      value: quay.io/KohlsTechnology/eunomia-applier:v0.0.1
 +  - name: SCHEDULE
-+    description: Periodic scheludle for gitops processing
++    description: Periodic schedule for gitops processing
 +    value: "@hourly"
 Stage this hunk [y,n,q,a,d,/,K,g,e,?]? **y**
 
