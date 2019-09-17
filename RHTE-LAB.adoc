@@ -165,7 +165,7 @@ Resolving deltas: 100% (129/129), done.
 
 . Update repository references in source to make use of your GitHub account instead of the upstream repository.
 +
-There are references to the repository in `requiremens.yml` and `templates/cluster-gitops.yaml`.
+There are references to the repository in `requirements.yml` and `templates/cluster-gitops.yaml`.
 The `requirements.yml` is used by the OpenShift applier during pre and post steps to pull down ansible roles.
 The `templates/cluster-gitops.yaml` will be used to configure Eunomia to point to your repository.
 +
